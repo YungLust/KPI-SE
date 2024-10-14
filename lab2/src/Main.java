@@ -1,3 +1,6 @@
+/**
+ * Main class creates objects of every other class and uses all of their functions
+ */
 public class Main {
     public static void main(String[] args) {
         System.out.println("\nClass1:");
