@@ -1,7 +1,7 @@
 /**
  * Class3 implements interface {@link If3 If3}<br>
  * It overrides methods from interface:<br>
- * {@link #meth1 meth1}, {@link #meth2 meth2}, {@link #meth3 meth3}
+ * {@link #meth1 meth1}, {@link #meth2 meth2()}, {@link #meth3 meth3()}
  */
 public class Cl3 implements If3 {
     /**

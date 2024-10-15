@@ -1,5 +1,5 @@
 /**
- *  interface1 has one method to be declared {@link #meth1() meth1}
+ *  interface1 has one method to be declared {@link #meth1 meth1()}
  */
 public interface If1 {
     /**
