@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/SoftwareEngineering/lab2</OriginalElement>
+  <nodes>
+    <node x="-67.5" y="522.2979710144928">Cl1</node>
+    <node x="-5.0" y="324.33608695652174">Cl3</node>
+    <node x="-5.0" y="224.82115942028986">If3</node>
+    <node x="75.0" y="146.5">If2</node>
+    <node x="16.5" y="720.128385236715">Main</node>
+    <node x="123.0" y="510.29797101449276">Cl2</node>
+    <node x="-44.0" y="-13.5">If1</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="Cl2" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="98.5" y="702.8654011980676" />
+      <point x="187.0" y="702.8654011980676" />
+      <point x="0.0" y="56.0" />
+    </edge>
+    <edge source="Main" target="Cl3" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="98.5" y="698.0" />
+      <point x="91.0" y="698.0" />
+      <point x="32.0" y="68.0" />
+    </edge>
+    <edge source="Main" target="Cl1" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="98.5" y="704.8333807922706" />
+      <point x="-4.5" y="704.8333807922706" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="Cl3" target="If3" relationship="REALIZATION">
+      <point x="0.0" y="-68.0" />
+      <point x="59.0" y="419.75" />
+      <point x="59.0" y="419.75" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="If3" target="If2" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="59.0" y="118.0" />
+      <point x="139.0" y="118.0" />
+      <point x="0.0" y="-31.5" />
+    </edge>
+    <edge source="Cl2" target="If2" relationship="REALIZATION">
+      <point x="0.0" y="-56.0" />
+      <point x="187.0" y="392.33608695652174" />
+      <point x="139.0" y="392.33608695652174" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="Cl1" target="Cl3" relationship="TO_ONE">
+      <point x="31.5" y="-44.0" />
+      <point x="-32.0" y="68.0" />
+    </edge>
+    <edge source="Cl1" target="If1" relationship="REALIZATION">
+      <point x="-31.5" y="-44.0" />
+      <point x="-36.0" y="158.0" />
+      <point x="-12.5" y="158.0" />
+      <point x="-31.5" y="31.5" />
+    </edge>
+    <edge source="If2" target="If1" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="139.0" y="98.0" />
+      <point x="50.5" y="98.0" />
+      <point x="31.5" y="31.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7105575326215896" showDependencies="true" x="91.5" y="397.5" />
+  <SelectedNodes>
+    <node>Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
