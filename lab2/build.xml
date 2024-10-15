@@ -1,0 +1,24 @@
+<project name="Lab_2" default="generate-javadoc" basedir=".">
+
+    <!-- declaring variables -->
+    <property name="docDir" value="JavaDoc"/>
+    <property name="sourceDir" value="src"/>
+
+    <!-- target for generating JavaDoc -->
+    <target name="generate-javadoc"
+            description="Generates JavaDoc">
+        <!-- Create directory for JavaDoc -->
+        <mkdir dir="${docDir}"/>
+        <!-- JavaDoc generates its code -->
+        <javadoc destdir="${docDir}" sourcepath="${sourceDir}">
+            <!--Decalring path to packages for documentation-->
+            <fileset dir="${sourceDir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
+    <target name="delete-javadoc"
+            description="Deletes JavaDocumentation">
+        <delete dir="${docDir}" />
+    </target>
+</project>
