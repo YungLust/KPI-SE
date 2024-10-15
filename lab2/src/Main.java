@@ -3,19 +3,34 @@
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("\nClass1:");
-        Cl3 Cl3Obj = new Cl3();
-        Cl1 Cl1Obj = new Cl1(Cl3Obj);
-        Cl1Obj.meth1();
+        System.out.println("\nCreating objects:");
+        // Create Cl3 object with temporary null value
+        Cl3 cl3 = new Cl3(null);
+        // Create Cl2 object with temporary null value
+        Cl2 cl2 = new Cl2(null);
 
-        System.out.println("*\nClass2:");
-        Cl2 Cl2Obj = new Cl2();
-        Cl2Obj.meth1();
-        Cl2Obj.meth2();
+        // Set If3 (as Cl3 implements it) for Cl2 object
+        cl2.setIf3(cl3);
+        System.out.println("*");
 
-        System.out.println("*\nClass3:");
-        Cl3Obj.meth1();
-        Cl3Obj.meth2();
-        Cl3Obj.meth3();
+        // Set If2 (as Cl2 implements it) for Cl3 object
+        cl3.setIf2(cl2);
+
+        //create Cl1 object
+        System.out.println("*");
+        Cl1 cl1 = new Cl1(cl3);
+
+        System.out.println("\nClass1 methods:");
+        cl1.meth1();
+
+        System.out.println("*\nClass2 methods:");
+        cl2.meth1();
+        cl2.meth2();
+
+        System.out.println("*\nClass3 methods:");
+
+        cl3.meth1();
+        cl3.meth2();
+        cl3.meth3();
     }
 }
