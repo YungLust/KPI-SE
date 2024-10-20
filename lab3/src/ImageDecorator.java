@@ -8,6 +8,6 @@ public class ImageDecorator extends MessageDecorator {
 
     @Override
     public String send() {
-        return super.send() + "\nSending file: " + image;
+        return super.send() + "\nSending image: " + image;
     }
 }
