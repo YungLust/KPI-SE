@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/SoftwareEngineering/lab2</OriginalElement>
+  <nodes>
+    <node x="-92.93983501945519" y="374.74566287937745">If1</node>
+    <node x="-89.6351439688716" y="843.2881556420234">Cl1</node>
+    <node x="5.387044357976606" y="485.75000000000006">If2</node>
+    <node x="-190.0" y="485.74999999999994">If3</node>
+    <node x="22.0" y="651.0">Cl2</node>
+    <node x="-183.66616852918287" y="627.0">Cl3</node>
+    <node x="110.91735408560317" y="855.1749727626459">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="Cl2" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="192.91735408560317" y="998.9446754863814" />
+      <point x="86.0" y="998.9446754863814" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="Main" target="Cl3" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="192.91735408560317" y="1019.3618677042801" />
+      <point x="-146.55041668482505" y="1019.3618677042801" />
+      <point x="-26.884248155642183" y="99.18424902723734" />
+    </edge>
+    <edge source="Main" target="Cl1" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="192.91735408560317" y="966.2713276264592" />
+      <point x="-26.635143968871603" y="966.2713276264592" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="Cl3" target="If3" relationship="REALIZATION">
+      <point x="-32.0" y="-93.0" />
+      <point x="-151.66616852918287" y="691.25" />
+      <point x="-158.0" y="691.25" />
+      <point x="-32.0" y="31.5" />
+    </edge>
+    <edge source="If3" target="If2" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="-126.0" y="461.74783143968875" />
+      <point x="69.3870443579766" y="461.74783143968875" />
+      <point x="0.0" y="-31.5" />
+    </edge>
+    <edge source="Cl2" target="If2" relationship="REALIZATION">
+      <point x="32.0" y="-81.0" />
+      <point x="118.0" y="612.0" />
+      <point x="86.0" y="612.0" />
+      <point x="86.0" y="492.0" />
+      <point x="101.3870443579766" y="492.0" />
+      <point x="32.0" y="31.5" />
+    </edge>
+    <edge source="Cl1" target="Cl3" relationship="TO_ONE">
+      <point x="31.5" y="-44.0" />
+      <point x="4.864856031128397" y="895.0297898832684" />
+      <point x="-109.01988171206233" y="895.0297898832684" />
+      <point x="-109.01988171206233" y="812.0" />
+      <point x="-87.66616852918287" y="812.0" />
+      <point x="32.0" y="-93.0" />
+    </edge>
+    <edge source="Cl1" target="If1" relationship="REALIZATION">
+      <point x="-31.5" y="-44.0" />
+      <point x="-58.1351439688716" y="998.9446754863814" />
+      <point x="-256.47391327626457" y="998.9446754863814" />
+      <point x="-256.47391327626457" y="406.2456628793774" />
+      <point x="-44.12278860700397" y="406.2456628793774" />
+      <point x="-14.18295358754878" y="-0.4615035019455149" />
+    </edge>
+    <edge source="If2" target="If1" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="69.3870443579766" y="406.24566287937745" />
+      <point x="1.560164980544812" y="406.24566287937745" />
+      <point x="31.5" y="31.5" />
+    </edge>
+    <edge source="Cl2" target="If3" relationship="TO_ONE">
+      <point x="-32.0" y="-81.0" />
+      <point x="54.0" y="581.4951595330739" />
+      <point x="-94.0" y="581.4951595330739" />
+      <point x="32.0" y="31.5" />
+    </edge>
+    <edge source="Cl3" target="If2" relationship="TO_ONE">
+      <point x="32.0" y="-93.0" />
+      <point x="-87.66616852918287" y="632.0" />
+      <point x="6.0" y="632.0" />
+      <point x="6.0" y="492.0" />
+      <point x="37.387044357976606" y="492.0" />
+      <point x="-32.0" y="31.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7717717717717718" showDependencies="true" x="9.000000000000114" y="697.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
