@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/SoftwareEngineering/lab3</OriginalElement>
+  <nodes>
+    <node x="-158.2666666666666" y="354.0">AudioDecorator</node>
+    <node x="26.5" y="192.0">MessageDecorator</node>
+    <node x="119.71333333333342" y="354.0">FileDecorator</node>
+    <node x="86.10666666666657" y="554.0">Main</node>
+    <node x="296.48" y="192.0">TextMessage</node>
+    <node x="99.5" y="42.5">Message</node>
+    <node x="-438.2466666666666" y="354.0">ImageDecorator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="TextMessage" target="Message" relationship="REALIZATION">
+      <point x="0.0" y="-44.0" />
+      <point x="386.48" y="134.63401196038825" />
+      <point x="194.75" y="134.63401196038825" />
+      <point x="31.75" y="31.5" />
+    </edge>
+    <edge source="ImageDecorator" target="MessageDecorator" relationship="GENERALIZATION">
+      <point x="0.0" y="-44.0" />
+      <point x="-308.7466666666666" y="316.0" />
+      <point x="143.0" y="316.0" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="MessageDecorator" target="Message" relationship="REALIZATION">
+      <point x="51.72946578609486" y="-42.83070042794668" />
+      <point x="194.72946578609486" y="172.82193781418667" />
+      <point x="194.75" y="172.82193781418667" />
+      <point x="31.75" y="31.5" />
+    </edge>
+    <edge source="Main" target="ImageDecorator" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="167.10666666666657" y="499.4666666666667" />
+      <point x="-308.7466666666666" y="499.4666666666667" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="AudioDecorator" target="MessageDecorator" relationship="GENERALIZATION">
+      <point x="0.0" y="-44.0" />
+      <point x="-29.766666666666595" y="316.0" />
+      <point x="143.0" y="316.0" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="FileDecorator" target="MessageDecorator" relationship="GENERALIZATION">
+      <point x="0.0" y="-44.0" />
+      <point x="241.71333333333342" y="316.0" />
+      <point x="143.0" y="316.0" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="Main" target="FileDecorator" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="167.10666666666657" y="464.9333333333334" />
+      <point x="241.71333333333342" y="464.9333333333334" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="MessageDecorator" target="Message" relationship="TO_ONE">
+      <point x="-58.25" y="-44.0" />
+      <point x="84.75" y="148.75" />
+      <point x="131.25" y="148.75" />
+      <point x="-31.75" y="31.5" />
+    </edge>
+    <edge source="Main" target="TextMessage" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="167.10666666666657" y="499.4666666666667" />
+      <point x="386.48" y="499.4666666666667" />
+      <point x="0.0" y="44.0" />
+    </edge>
+    <edge source="Main" target="AudioDecorator" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="167.10666666666657" y="480.2165333333335" />
+      <point x="-29.766666666666595" y="480.2165333333335" />
+      <point x="0.0" y="44.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7537688442211063" showDependencies="true" x="60.3773333333329" y="385.99999999999955" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
