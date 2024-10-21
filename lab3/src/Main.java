@@ -1,3 +1,6 @@
+/**
+ * Main class creates text message and then adds image file and audio to it.
+ */
 public class Main {
     public static void main(String[] args) {
         Message Msg = new TextMessage("Hi! I have some information for you.");
