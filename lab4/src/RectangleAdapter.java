@@ -10,6 +10,8 @@ public class RectangleAdapter extends Rectangle{
 
         //rounded rectangle is a rectangle when has 0 corner radius
         roundedRectangle.setCornerRadius(0);
+        width = getWidth();
+        height = getHeight();
     }
 
     public RectangleAdapter(Polygon polygon){
@@ -17,6 +19,8 @@ public class RectangleAdapter extends Rectangle{
 
         //polygon is a square when has 4 slides
         polygon.setSlides(4);
+
+        height = width = polygon.getRadius();
     }
 }
 
