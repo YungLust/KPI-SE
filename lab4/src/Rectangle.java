@@ -1,6 +1,6 @@
 public class Rectangle {
-    private float width;
-    private float height;
+    private int width;
+    private int height;
 
     public Rectangle() {}
 
@@ -9,25 +9,12 @@ public class Rectangle {
         this.height = height;
     }
 
-
-
-    public float getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public void setWidth(float width) {
-        this.width = width;
-    }
-
-    public float getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
-        this.height = height;
-    }
-
-    public float getArea() {
-        return width * height;
-    }
 }

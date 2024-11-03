@@ -1,7 +1,7 @@
 
 public class RectangleAdapter extends Rectangle{
-    private float width;
-    private float height;
+    private int width;
+    private int height;
 
     public RectangleAdapter(RoundedRectangle roundedRectangle){
 
@@ -22,19 +22,19 @@ public class RectangleAdapter extends Rectangle{
          * in our occasion it`s a half of the square`s diagonal
          * so to get square`s side we need to multiply radius by sqrt(2)
          */
-        float sqrSide = (float) (polygon.getRadius() * Math.sqrt(2));
+        int sqrSide = (int) (polygon.getRadius() * Math.sqrt(2));
         width = sqrSide;
         height = sqrSide;
 
     }
 
     @Override
-    public float getWidth(){
+    public int getWidth(){
         return width;
     }
 
     @Override
-    public float getHeight(){
+    public int getHeight(){
         return height;
     }
 }

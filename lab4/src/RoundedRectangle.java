@@ -1,35 +1,21 @@
 public class RoundedRectangle {
-    private float width;
-    private float height;
-    private float cornerRadius;
+    private int width;
+    private int height;
+    private int cornerRadius;
 
-    public RoundedRectangle(float width, float height, float cornerRadius) {
+    public RoundedRectangle(int width, int height, int cornerRadius) {
         this.width = width;
         this.height = height;
         this.cornerRadius = cornerRadius;
     }
 
-    public float getWidth() {
+    public int getWidth() {
         return width;
     }
-
-    public void setWidth(float width) {
-        this.width = width;
-    }
-
-    public float getHeight() {
+    public int getHeight() {
         return height;
     }
-
-    public void setHeight(float height) {
-        this.height = height;
-    }
-
-    public float getCornerRadius() {
-        return cornerRadius;
-    }
-
-    public void setCornerRadius(float cornerRadius) {
+    public void setCornerRadius(int cornerRadius) {
         this.cornerRadius = cornerRadius;
     }
 }

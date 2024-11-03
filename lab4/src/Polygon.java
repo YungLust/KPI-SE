@@ -1,25 +1,17 @@
 public class Polygon {
-    private float radius;
-    private int slides;
+    private int radius;
+    private int sides;
 
-    public Polygon(float radius, int slides) {
+    public Polygon(int radius, int sides) {
         this.radius = radius;
-        this.slides = slides;
+        this.sides = sides;
     }
 
-    public float getRadius() {
+    public int getRadius() {
         return radius;
     }
 
-    public void setRadius(float radius) {
-        this.radius = radius;
-    }
-
-    public int getSlides() {
-        return slides;
-    }
-
-    public void setSlides(int slides) {
-        this.slides = slides;
+    public void setSides(int sides) {
+        this.sides = sides;
     }
 }

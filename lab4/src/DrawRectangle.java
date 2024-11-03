@@ -1,14 +1,18 @@
 public class DrawRectangle {
-    private final Rectangle rectangle;
+    private Rectangle rectangle;
 
 
     public DrawRectangle(Rectangle rectangle){
         this.rectangle = rectangle;
     }
 
+    public void setRectangle(Rectangle rectangle){
+        this.rectangle = rectangle;
+    }
+
     public void draw() {
-        float width = rectangle.getWidth();
-        float height = rectangle.getHeight();
+        int width = rectangle.getWidth();
+        int height = rectangle.getHeight();
         System.out.println("Drawing rectangle:");
 
         for (int i = 0; i < height; i++) {
