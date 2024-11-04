@@ -1,8 +1,15 @@
-
+/**
+ * Class to present other figures as rectangles
+ */
 public class RectangleAdapter extends Rectangle{
     private int width;
     private int height;
 
+    /**
+     * Overloading constructor that converts roundedRectangle to rectangle
+     * It is achieved by setting corner radius to 0
+     * @param roundedRectangle figure to present as rectangle
+     */
     public RectangleAdapter(RoundedRectangle roundedRectangle){
 
         //rounded rectangle is a rectangle when it has 0 corner radius
@@ -12,6 +19,11 @@ public class RectangleAdapter extends Rectangle{
         height = roundedRectangle.getHeight();
     }
 
+    /**
+     * Overloading constructor that converts polygon to rectangle
+     * It is achieved by setting sides to 4 and getting width and height from radius by formula
+     * @param polygon figure to present as rectangle
+     */
     public RectangleAdapter(Polygon polygon){
 
         //polygon is a square when it has 4 sides
@@ -28,11 +40,21 @@ public class RectangleAdapter extends Rectangle{
 
     }
 
+    /**
+     * we need to override the method from super class
+     * so it works properly in {@link DrawRectangle DrawRectangle} class
+     * @return it returns width
+     */
     @Override
     public int getWidth(){
         return width;
     }
 
+    /**
+     * we need to override the method from super class
+     * so it works properly in {@link DrawRectangle DrawRectangle} class
+     * @return it returns height
+     */
     @Override
     public int getHeight(){
         return height;

@@ -1,9 +1,13 @@
+/**
+ * In main class we create rectangles from different figures and draw them
+ */
+
 class Main{
     public static void main(String[] args){
 
         //initialize our figues
         RoundedRectangle roundedRect = new RoundedRectangle(4,8,25);
-        Polygon polygon = new Polygon(10, 12);
+        Polygon polygon = new Polygon(3, 12);
         Rectangle rect = new Rectangle(12,6);
 
         //adapt if needed

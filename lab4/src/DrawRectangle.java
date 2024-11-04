@@ -1,15 +1,28 @@
+/**
+ * Class for drawing rectangles
+ */
 public class DrawRectangle {
     private Rectangle rectangle;
 
-
+    /**
+     * Constructor takes rectangle object from {@link Rectangle Rectangle} class
+     * @param rectangle object of the {@link Rectangle Rectangle} class
+     */
     public DrawRectangle(Rectangle rectangle){
         this.rectangle = rectangle;
     }
 
+    /**
+     * This method changes rectangle that we draw
+     * @param rectangle some new rectangle
+     */
     public void setRectangle(Rectangle rectangle){
         this.rectangle = rectangle;
     }
 
+    /**
+     * Draws rectangles according to its width and height using symbols
+     */
     public void draw() {
         int width = rectangle.getWidth();
         int height = rectangle.getHeight();
