@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Java/KPI-SE/lab4</OriginalElement>
+  <nodes>
+    <node x="170.0" y="351.0">ShapeToolAdapter</node>
+    <node x="505.0" y="351.0">Shape</node>
+    <node x="-97.0" y="351.0">LegacyShape</node>
+    <node x="100.0" y="184.5">LegacyShapeTool</node>
+    <node x="403.0" y="184.5">ShapeTool</node>
+    <node x="-67.5" y="551.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="LegacyShape" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="LegacyShape" target="LegacyShapeTool" relationship="REALIZATION">
+      <point x="0.0" y="-48.0" />
+      <point x="14.0" y="319.0" />
+      <point x="147.0" y="319.0" />
+      <point x="-47.0" y="34.5" />
+    </edge>
+    <edge source="ShapeToolAdapter" target="LegacyShapeTool" relationship="TO_ONE">
+      <point x="-71.0" y="-48.0" />
+      <point x="47.0" y="34.5" />
+    </edge>
+    <edge source="ShapeToolAdapter" target="ShapeTool" relationship="REALIZATION">
+      <point x="71.0" y="-48.0" />
+      <point x="383.0" y="319.0" />
+      <point x="480.5" y="319.0" />
+      <point x="0.0" y="34.5" />
+    </edge>
+    <edge source="Main" target="Shape" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="14.0" y="519.0" />
+      <point x="594.0" y="519.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="Shape" target="ShapeTool" relationship="REALIZATION">
+      <point x="0.0" y="-48.0" />
+      <point x="594.0" y="319.0" />
+      <point x="480.5" y="319.0" />
+      <point x="0.0" y="34.5" />
+    </edge>
+    <edge source="Main" target="ShapeToolAdapter" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="14.0" y="519.0" />
+      <point x="312.0" y="519.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="true" x="293.00000000000006" y="415.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
