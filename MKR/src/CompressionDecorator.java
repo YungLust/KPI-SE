@@ -1,15 +1,14 @@
 public class CompressionDecorator extends MessageDecorator {
+    private String key;
 
-    public CompressionDecorator(Message decoratedMessage) {
+    public CompressionDecorator(Message decoratedMessage, String key) {
         super(decoratedMessage);
-    }
-
-    private String compress(){
-        return super.send() + "\nCompressed!";
+        this.key = key;
     }
 
     @Override
     public String send() {
-        return compress();
+        String text = super.send();
+        return text.replace(" ", key);
     }
 }
