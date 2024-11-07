@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class EncryptionDecorator extends MessageDecorator {
     private int step;
 
@@ -7,8 +9,15 @@ public class EncryptionDecorator extends MessageDecorator {
     }
 
     private String caesarCipher() {
-        //System.out.println("Using Caesar cipher with step: " + step);
-        return "Encrypted!\n" + super.send();
+        String text = super.send();
+        char[] textChar = text.toCharArray();
+        StringBuilder changedText = new StringBuilder();
+        for (char letter : textChar) {
+            int changedLetter = (int) letter + step;
+            letter = (char) changedLetter;
+            changedText.append(letter);
+        }
+        return changedText.toString();
     }
 
     @Override
