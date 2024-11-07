@@ -1,28 +1,19 @@
 /**
- * In main class we create rectangles from different figures and draw them
+ * In main class we create rectangle shape and build them
  */
-
 class Main{
     public static void main(String[] args){
 
-        //initialize our figues
-        RoundedRectangle roundedRect = new RoundedRectangle(4,8,25);
-        Polygon polygon = new Polygon(3, 12);
-        Rectangle rect = new Rectangle(12,6);
+        //create rectangle objects
+        LegacyShape legacyRectangle = new LegacyShape(12,6, "rectangleOld");
+        Shape defaultRectangle = new Shape(8,16,"rectangleNew");
 
-        //adapt if needed
-        RectangleAdapter roundedAdapter = new RectangleAdapter(roundedRect);
-        RectangleAdapter polygonAdapter = new RectangleAdapter(polygon);
-
-        //draw figures
-        DrawRectangle drawRect = new DrawRectangle(roundedAdapter);
-        drawRect.draw();
-        System.out.println("\n");
-        drawRect.setRectangle(polygonAdapter);
-        drawRect.draw();
-        System.out.println("\n");
-        drawRect.setRectangle(rect);
-        drawRect.draw();
-
+        //build them
+        legacyRectangle.build();
+        System.out.println("*");
+        defaultRectangle.build(10,10);
+        System.out.println("*");
+        ShapeToolAdapter adapter = new ShapeToolAdapter(legacyRectangle);
+        adapter.build(12,-8);
     }
 }
