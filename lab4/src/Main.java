@@ -13,6 +13,9 @@ class Main{
         System.out.println("*");
         defaultRectangle.build(10,10);
         System.out.println("*");
+        int x = 12;
+        int y = -8;
+        System.out.printf("Using adapter to build legacy shape on coordinates [%d,%d]:\n\n",x,y);
         ShapeToolAdapter adapter = new ShapeToolAdapter(legacyRectangle);
         adapter.build(12,-8);
     }
