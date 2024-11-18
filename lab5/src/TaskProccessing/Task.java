@@ -55,6 +55,11 @@ public class Task {
         }
     }
 
+    @Override
+    public String toString(){
+        return title+": "+description;
+    }
+
     public String getTitle() {
         return title;
     }
