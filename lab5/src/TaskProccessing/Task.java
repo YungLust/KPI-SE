@@ -39,6 +39,10 @@ public class Task {
         subscribers.add(sub);
     }
 
+    public void unsubscribe(Subscriber sub){
+        subscribers.remove(sub);
+    }
+
     private void notifySubscribers(){
         for (Subscriber subscriber : subscribers){
             subscriber.update(this);

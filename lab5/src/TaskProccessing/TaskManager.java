@@ -53,9 +53,7 @@ public class TaskManager {
     }
 
     public void subscribe(TaskCategory category, Subscriber sub){
-        //add new sub to category
-        Set<Subscriber> categorySubs = categorySubscribers.get(category);
-        categorySubs.add(sub);
+        categorySubscribers.get(category).add(sub);
 
         //subscribe to all tasks of category
         Set<Task> categoryTasks = taskByCategory.get(category);
@@ -66,5 +64,17 @@ public class TaskManager {
 
     public void subscribe(Task task, Subscriber sub){
         task.subscribe(sub);
+    }
+
+    public void unsubscribe(TaskCategory category, Subscriber sub){
+        categorySubscribers.get(category).remove(sub);
+        Set<Task> categoryTasks = taskByCategory.get(category);
+        for (Task task : categoryTasks){
+            task.unsubscribe(sub);
+        }
+    }
+
+    public void unsubscribe (Task task, Subscriber sub){
+        task.unsubscribe(sub);
     }
 }
