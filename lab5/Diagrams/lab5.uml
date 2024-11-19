@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Java/KPI-SE/lab5</OriginalElement>
+  <nodes>
+    <node x="-81.56629670942645" y="194.01390706992694">Main.Subscriber</node>
+    <node x="21.809610589140817" y="545.1853311397313">Main.User</node>
+    <node x="904.345965580217" y="195.8419373807182">TaskProccessing.TaskCategory</node>
+    <node x="334.37649230525585" y="558.1853311397313">Main.Main</node>
+    <node x="252.37649230525585" y="-15.290552531944456">TaskProccessing.Task</node>
+    <node x="1236.7938538443038" y="135.45468584408297">TaskProccessing.TaskManager</node>
+    <node x="640.0722815962965" y="155.07907822078954">TaskProccessing.TaskState</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main.Main" target="Main.User" relationship="CREATE">
+      <point x="-6.147393787042603" y="-48.0" />
+      <point x="409.7290985182133" y="617.9653178690692" />
+      <point x="147.30961058914082" y="617.9653178690692" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="TaskProccessing.TaskManager" target="TaskProccessing.TaskCategory" relationship="TO_MANY">
+      <point x="1.4615569625675562E-4" y="127.00031415591701" />
+      <point x="1400.294" y="483.0" />
+      <point x="1018.846" y="483.0" />
+      <point x="3.441978299179027E-5" y="61.00006261928178" />
+    </edge>
+    <edge source="TaskProccessing.Task" target="TaskProccessing.TaskCategory" relationship="TO_ONE">
+      <point x="-4.923052558751806E-4" y="217.99955253194446" />
+      <point x="415.876" y="483.0" />
+      <point x="1018.846" y="483.0" />
+      <point x="3.441978299179027E-5" y="61.00006261928178" />
+    </edge>
+    <edge source="TaskProccessing.Task" target="TaskProccessing.TaskState" relationship="TO_ONE">
+      <point x="163.5" y="13.369630752733997" />
+      <point x="-102.0" y="0.0" />
+    </edge>
+    <edge source="Main.User" target="TaskProccessing.TaskCategory" relationship="TO_MANY">
+      <point x="3.894108591850909E-4" y="-61.000331139731315" />
+      <point x="147.31" y="483.0" />
+      <point x="1018.846" y="483.0" />
+      <point x="3.441978299179027E-5" y="61.00006261928178" />
+    </edge>
+    <edge source="Main.User" target="TaskProccessing.Task" relationship="TO_MANY">
+      <point x="-14.999610589140815" y="-61.0" />
+      <point x="132.31" y="306.513907069927" />
+      <point x="-163.5" y="103.80445960187143" />
+    </edge>
+    <edge source="Main.User" target="Main.Subscriber" relationship="REALIZATION">
+      <point x="-103.37590729856727" y="-61.0" />
+      <point x="0.0" y="47.50000000000003" />
+    </edge>
+    <edge source="TaskProccessing.Task" target="Main.Subscriber" relationship="TO_MANY">
+      <point x="-163.5" y="38.8044596018714" />
+      <point x="125.49999999999999" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7064825930372148" showDependencies="true" x="741.0" y="325.99999999999994" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
