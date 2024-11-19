@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Main","l":"Main"},{"p":"Main","l":"Subscriber"},{"p":"TaskProccessing","l":"Task"},{"p":"TaskProccessing","l":"TaskCategory"},{"p":"TaskProccessing","l":"TaskManager"},{"p":"TaskProccessing","l":"TaskState"},{"p":"Main","l":"User"}];updateSearchResults();
