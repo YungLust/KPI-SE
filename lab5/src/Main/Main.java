@@ -1,3 +1,4 @@
+
 package Main;
 
 import TaskProccessing.Task;
@@ -5,6 +6,10 @@ import TaskProccessing.TaskCategory;
 import TaskProccessing.TaskManager;
 import TaskProccessing.TaskState;
 
+/**
+ * In main class the logic of the program tested
+ * Some users and tasks created.
+ */
 public class Main {
     public static void main(String[] args){
         TaskManager manager = TaskManager.getInstance();
