@@ -1,3 +1,5 @@
+import java.util.Set;
+
 public class NetworkCalcPrice implements NetworkVisitor {
     private float serverPrice = 100;
     private float cablePrice = (float) 2.5;
@@ -16,6 +18,17 @@ public class NetworkCalcPrice implements NetworkVisitor {
     @Override
     public float visit(WorkStation station) {
         return stationPrice;
+    }
+
+    @Override
+    public float visit(NetworkSystem system) {
+        float systemPrice = 0;
+        Set<NetworkElement> elements = system.getElements();
+        for (NetworkElement element : elements) {
+            systemPrice += element.accept(this);
+
+        }
+        return systemPrice;
     }
 
     public float calculate(NetworkElement... elements) {
