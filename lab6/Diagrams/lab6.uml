@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Java/KPI-SE/lab6</OriginalElement>
+  <nodes>
+    <node x="557.5942776735462" y="269.5">Cable</node>
+    <node x="833.3592870544094" y="52.29878048780489">NetworkVisitor</node>
+    <node x="811.8592870544094" y="269.5">NetworkCalcPrice</node>
+    <node x="37.0" y="23.5">NetworkElement</node>
+    <node x="331.8292682926831" y="490.1088180112571">Main</node>
+    <node x="303.3292682926831" y="269.5">Server</node>
+    <node x="49.06425891181999" y="269.5">WorkStation</node>
+    <node x="-267.2007504690431" y="230.0">NetworkSystem</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="WorkStation" target="NetworkElement" relationship="REALIZATION">
+      <point x="-48.12116697936233" y="-48.41479174484056" />
+      <point x="110.03820637898679" y="269.08520825515944" />
+      <point x="110.03820637898679" y="185.86641651031894" />
+      <point x="-36.961793621013214" y="35.53741088180112" />
+    </edge>
+    <edge source="NetworkCalcPrice" target="NetworkVisitor" relationship="REALIZATION">
+      <point x="0.0" y="-179.0" />
+      <point x="937.8592870544094" y="302.125" />
+      <point x="937.8592870544094" y="302.125" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="Main" target="NetworkSystem" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="413.3292682926831" y="538.1088180112571" />
+      <point x="-126.2007504690431" y="538.1088180112571" />
+      <point x="0.0" y="87.5" />
+    </edge>
+    <edge source="NetworkSystem" target="NetworkElement" relationship="TO_MANY">
+      <point x="-70.5" y="-87.5" />
+      <point x="-196.7007504690431" y="58.0" />
+      <point x="92.0" y="58.0" />
+      <point x="-55.0" y="34.5" />
+    </edge>
+    <edge source="Server" target="NetworkElement" relationship="REALIZATION">
+      <point x="0.0" y="-48.0" />
+      <point x="413.3292682926831" y="239.62473545966228" />
+      <point x="174.60915572232648" y="239.62473545966228" />
+      <point x="174.60915572232648" y="118.0" />
+      <point x="174.28508067542202" y="118.0" />
+      <point x="27.285080675422023" y="33.727639774859284" />
+    </edge>
+    <edge source="Main" target="Cable" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="413.3292682926831" y="519.7283302063789" />
+      <point x="667.5942776735462" y="519.7283302063789" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="Cable" target="NetworkElement" relationship="REALIZATION">
+      <point x="0.0" y="-48.0" />
+      <point x="667.5942776735462" y="158.18503564727956" />
+      <point x="202.0" y="158.18503564727956" />
+      <point x="55.0" y="34.5" />
+    </edge>
+    <edge source="Main" target="NetworkCalcPrice" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="413.3292682926831" y="549.6577861163229" />
+      <point x="937.8592870544094" y="549.6577861163229" />
+      <point x="0.0" y="179.0" />
+    </edge>
+    <edge source="Main" target="Server" relationship="CREATE">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="NetworkSystem" target="NetworkElement" relationship="REALIZATION">
+      <point x="70.5" y="-87.5" />
+      <point x="-55.7007504690431" y="198.0" />
+      <point x="61.17438649155713" y="198.0" />
+      <point x="-85.82561350844287" y="32.09783114446519" />
+    </edge>
+    <edge source="NetworkVisitor" target="NetworkVisitor" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="0.0" />
+      <point x="937.8592870544094" y="-31.20121951219511" />
+      <point x="937.8592870544094" y="123.21613508442775" />
+      <point x="-7.485771106941684" y="-2.5826454033771427" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7985294117647059" showDependencies="true" x="398.00000000000006" y="298.00000000000006" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
