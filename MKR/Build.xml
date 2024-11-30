@@ -1,0 +1,23 @@
+<project name="MyProject" default="create-jar" basedir=".">
+    <!-- Визначення властивостей -->
+    <property name="jar.name" value="myapp.jar"/>
+    <property name="main.class" value="jar.mainClass"/>
+    <property name="created.by" value="Your Name"/> <!-- Вкажіть своє ім'я -->
+
+    <!-- Ціль для створення jar-архіву -->
+    <target name="create-jar">
+        <!-- Створення маніфесту з необхідними атрибутами -->
+        <manifest file="manifest.mf">
+            <attribute name="Created-By" value="${created.by}"/>
+            <attribute name="Main.Main-Class" value="${main.class}"/>
+        </manifest>
+
+        <!-- Створення jar-архіву -->
+        <jar destfile="${jar.name}" manifest="manifest.mf">
+            <fileset dir="." includes="**/*.class"/>
+        </jar>
+
+        <!-- Видалення тимчасового файлу маніфесту -->
+        <delete file="manifest.mf"/>
+    </target>
+</project>

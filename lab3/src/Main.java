@@ -1,5 +1,5 @@
 /**
- * Main class creates text message and then adds image file and audio to it.
+ * Main.Main class creates text message and then adds image file and audio to it.
  */
 public class Main {
     public static void main(String[] args) {

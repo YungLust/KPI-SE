@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"LegacyShape"},{"p":"<Unnamed>","l":"LegacyShapeTool"},{"p":"<Unnamed>","l":"Shape"},{"p":"<Unnamed>","l":"ShapeTool"},{"p":"<Unnamed>","l":"ShapeToolAdapter"}];updateSearchResults();

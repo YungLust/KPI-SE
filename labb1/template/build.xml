@@ -76,7 +76,7 @@
               <manifest>
                 <attribute name="Created-By" value="${app.author} - (${app.company})"/>
                 <attribute name="Built-By" value="${user.name}"/>
-                <attribute name="Main-Class" value="${jar.mainClass}"/>
+                <attribute name="Main.Main-Class" value="${jar.mainClass}"/>
                 <section name="${app.name}">                  
                   <attribute name="Specification-Title" value="${app.title}"/>
                   <attribute name="Specification-Version" value="${app.version}"/>
