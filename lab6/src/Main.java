@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * in main class {@link NetworkElement NetworkElement} objects created and then passed to be calculated
+ * in {@link NetworkCalcPrice NetworkCalcPrice}
+ */
 public class Main{
     public static void main (String[] args){
         /*Server server = new Server();
