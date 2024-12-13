@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * in main class {@link NetworkElement NetworkElement} objects created and then passed to be calculated
  * in {@link NetworkCalcPrice NetworkCalcPrice}
@@ -16,7 +13,7 @@ public class Main{
         Server server2 = new Server();
         System.out.println("*");*/
         Cable redCable = new Cable(12.4);
-        Cable blueCable = new Cable(42.1);
+        Cable blueCable = new Cable(412.1);
         Cable greenCable = new Cable(28.5);
         Server mainServer = new Server();
         NetworkSystem systemRoom5 = new NetworkSystem(redCable,blueCable,greenCable,mainServer);

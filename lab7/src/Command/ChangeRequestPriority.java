@@ -14,7 +14,7 @@ public class ChangeRequestPriority extends HttpCommand {
      * @param request  is request whose priority to change
      * @param queue    is queue where this request placed
      * @param priority is new priority of the request
-     * @see {@link HttpQueue#changeRequestPriority Main.HttpQueue.changeRequestPriority()}
+     *
      */
     public ChangeRequestPriority(HttpRequest request, HttpQueue queue, int priority) {
         super(request, queue);

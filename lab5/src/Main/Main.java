@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args){
         TaskManager manager = TaskManager.getInstance();
 
-        Task BugTask = manager.createTask("Fix bug", "Fix bug #145 in Main.java", TaskCategory.FIXING);
+        Task BugTask = manager.createTask("Fix bug", "Fix bug #145 in Main.Main.java", TaskCategory.FIXING);
 
         manager.createTask("Make another login variant", "Make login variant via Telegram", TaskCategory.BACKEND);
 

@@ -26,7 +26,7 @@ test {
 jar {
     manifest{
 
-        attributes"Main.Main-Class": "prog.Main.Main"
+        attributes"Main.Main.Main.Main-Class": "prog.Main.Main.Main.Main"
 
     }
 
