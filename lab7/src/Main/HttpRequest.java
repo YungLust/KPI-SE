@@ -12,6 +12,7 @@ public class HttpRequest {
      * Priority is maxed at this value.
      */
     private final int maxPriority = 256;
+    private final int minPriority = -128;
 
     private String url;
     private int code;
@@ -57,8 +58,14 @@ public class HttpRequest {
      * @param priority is the new priority of the HTTP request.
      */
     public void changePriority(int priority) {
+        //consider min and max priority
         priority = Math.min(priority, maxPriority);
+        priority = Math.max(priority, minPriority);
+
+        // calculate negative priority
         priority = priority < 0 ? (maxPriority/2 - priority) : priority;
+
+        //change priority
         System.out.println(this + " — Changing priority to " + priority);
         this.priority = priority;
     }
@@ -69,7 +76,8 @@ public class HttpRequest {
      */
     @Override
     public String toString() {
-        return "Request with the code " + code + ": " + message + "\nto url: " + url + " — " + getPriority();
+        return "Request with the code " + code + ": " + message + "\nto url: " + url +
+                " — " + getPriority();
     }
 
     public void setOrder(int order) {
