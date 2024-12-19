@@ -11,7 +11,18 @@ public abstract class Hero implements Subscriber {
     private int yCoord;
 
     public void attack(Hero enemy){
-        enemy.getHit(damage);
+        //calculate distance between enemy and hero
+        int distanceX = Math.abs(xCoord - enemy.getxCoord());
+        int distanceY = Math.abs(yCoord - enemy.getyCoord());
+        int distance = (int) Math.round(Math.sqrt(Math.pow(distanceX,2) + Math.pow(distanceY,2)));
+
+        if (distance < range){
+            enemy.getHit(damage);
+        }
+        else {
+            System.out.println("enemy not in range");
+        }
+
     }
     public void move(int x, int y){
         xCoord += x;
@@ -27,16 +38,38 @@ public abstract class Hero implements Subscriber {
         yCoord = y;
     }
 
-    public void getHit(int hitDamage){
+    private void getHit(int hitDamage){
         hp -= hitDamage;
     }
 
-    public String getName(){
+    @Override
+    public void update(String message){
+        Class<? extends Hero> c = this.getClass();
+        System.out.println(c.getName()+" - "+name+"| notified: "+message);
+
+    }
+
+    public String getName() {
         return name;
     }
 
-    @Override
-    public void update(Hero h){
-        System.out.println("New character in arena - " + h.getName());
+    public int getHp() {
+        return hp;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public int getRange() {
+        return range;
+    }
+
+    public int getxCoord() {
+        return xCoord;
+    }
+
+    public int getyCoord() {
+        return yCoord;
     }
 }
