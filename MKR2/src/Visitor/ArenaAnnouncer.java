@@ -9,14 +9,19 @@ public class ArenaAnnouncer implements Announcer {
     private HashSet<Subscriber> subs = new HashSet<>();
 
     @Override
-    public void notifySubs(Hero hero) {
+    public void notifySubs(String message) {
         for (Subscriber sub : subs){
-            sub.update(hero);
+            sub.update(message);
         }
     }
 
     @Override
-    public void addSubs(Subscriber ... newSubs) {
-        subs.addAll(Arrays.asList(newSubs));
+    public void addSub(Subscriber newSub) {
+        subs.add(newSub);
+    }
+
+    @Override
+    public void removeSub(Subscriber oldSub){
+        subs.remove(oldSub);
     }
 }
