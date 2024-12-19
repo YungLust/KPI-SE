@@ -3,7 +3,7 @@ package AbstractFactory;
 import Heroes.*;
 
 public class WarriorFactory implements HeroFactory {
-    private final String name = "Mario";
+    private final String name = "Geralt";
     private final int defaultHp = 200;
     private final int defaultDamage = 25;
     private final int defaultRange = 1;
@@ -12,6 +12,6 @@ public class WarriorFactory implements HeroFactory {
 
     @Override
     public Hero createHero() {
-        return new Warrior(defaultHp,defaultDamage,defaultRange,defaultX,defaultY);
+        return new Warrior(name,defaultHp,defaultDamage,defaultRange,defaultX,defaultY);
     }
 }
