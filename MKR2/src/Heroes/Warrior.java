@@ -6,13 +6,14 @@ public class Warrior extends Hero {
     }
 
     @Override
-    public void attack() {
-        System.out.println("Heroes.Warrior hits with a sword");
+    public void attack(Hero enemy) {
+        System.out.println("Warrior hits with a sword");
+        super.attack(enemy);
     }
 
     @Override
     public void move(int x, int y) {
-        System.out.println("Warrior moves");
-        super.move(x,y);
+        System.out.println("Warrior rushes");
+        super.move(5,5);
     }
 }

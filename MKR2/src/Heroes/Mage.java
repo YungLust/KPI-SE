@@ -14,6 +14,6 @@ public class Mage extends Hero{
     @Override
     public void move(int x, int y) {
         System.out.println("Mage teleports");
-        super.move(x,y);
+        super.move(15,15);
     }
 }

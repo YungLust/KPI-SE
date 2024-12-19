@@ -7,13 +7,14 @@ public class Archer extends Hero{
     }
 
     @Override
-    public void attack() {
-        System.out.println("Heroes.Archer shoots an arrow!");
+    public void attack(Hero enemy) {
+        System.out.println("Archer shoots an arrow!");
+        super.attack(enemy);
     }
 
     @Override
     public void move(int x, int y) {
-        System.out.println("Archer moves");
-        super.move(x,y);
+        System.out.println("Archer sneaks");
+        super.move(1,1);
     }
 }
