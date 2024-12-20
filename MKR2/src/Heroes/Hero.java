@@ -10,17 +10,18 @@ public abstract class Hero implements Subscriber {
     private int xCoord;
     private int yCoord;
 
-    public void attack(Hero enemy){
+    public boolean attack(Hero enemy){
         //calculate distance between enemy and hero
         int distanceX = Math.abs(xCoord - enemy.getxCoord());
         int distanceY = Math.abs(yCoord - enemy.getyCoord());
         int distance = (int) Math.round(Math.sqrt(Math.pow(distanceX,2) + Math.pow(distanceY,2)));
-
         if (distance < range){
             enemy.getHit(damage);
+            return true;
         }
         else {
-            System.out.println("enemy not in range");
+            System.out.println("Enemy not in range. Attack is missed");
+            return false;
         }
 
     }
@@ -47,6 +48,10 @@ public abstract class Hero implements Subscriber {
         Class<? extends Hero> c = this.getClass();
         System.out.println(c.getName()+" - "+name+"| notified: "+message);
 
+    }
+
+    public int[] getCoords(){
+        return new int[]{xCoord,yCoord};
     }
 
     public String getName() {
