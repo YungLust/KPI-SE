@@ -2,6 +2,6 @@ package AbstractFactory;
 
 import Heroes.*;
 
-public interface HeroFactory {
-    Hero createHero();
+public interface HeroFactory <T extends Hero> {
+    T createHero();
 }

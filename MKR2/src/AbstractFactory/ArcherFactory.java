@@ -2,7 +2,7 @@ package AbstractFactory;
 
 import Heroes.*;
 
-public class ArcherFactory implements HeroFactory {
+public class ArcherFactory implements HeroFactory<Archer> {
     private final String name = "Damiaan";
     private final int defaultHp = 100;
     private final int defaultDamage = 30;
@@ -11,7 +11,7 @@ public class ArcherFactory implements HeroFactory {
     private final int defaultY = 10;
 
     @Override
-    public Hero createHero() {
-        return new Archer(name,defaultHp,defaultDamage,defaultRange,defaultX,defaultY);
+    public Archer createHero() {
+        return new Archer(name, defaultHp, defaultDamage, defaultRange, defaultX, defaultY);
     }
 }
