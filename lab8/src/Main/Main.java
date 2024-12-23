@@ -3,6 +3,7 @@ package Main;
 import Buildings.*;
 import Database.*;
 import GameZone.*;
+import GameZone.Builder.*;
 
 import java.util.Arrays;
 
@@ -38,7 +39,20 @@ public class Main {
         ConfigRetriever cr = new ConfigRetriever("small");
         System.out.println(Arrays.toString(cr.getGameZoneConfig()));
 
+        Director director = new Director();
+        GameZone zoneSmall = director.buildSmallGameZone("suzzuru");
+        GameZone zoneDefault = director.buildDefaultGameZone("otsg");
+        GameZone zoneLarge = director.buildLargeGameZone("w1erley");
 
+        House hugeHouse = new House(25,25);
+        zoneLarge.build(hugeHouse,50-12,50-12);
+
+        System.out.println("\nSMALL:");
+        zoneSmall.display();
+        System.out.println("\nDEFAULT:");
+        zoneDefault.display();
+        System.out.println("\nLARGE:");
+        zoneLarge.display();
 
     }
 }
