@@ -6,11 +6,14 @@ import java.io.*;
 import java.util.Arrays;
 
 public class ConfigRetriever {
-    public int[] getGameZoneConfig(String configName){
-        configName = configName.contains(".cfg") ? configName : configName+".cfg";
+    String configName;
+    File configFile;
 
-        File configFile = new File(".\\lab8\\src\\"+configName);
+    public ConfigRetriever(String configName){
+        changeConfig(configName);
+    }
 
+    public int[] getGameZoneConfig(){
         try (BufferedReader reader = new BufferedReader(new FileReader(configFile))) {
             int[] result = new int[2];
             String line = reader.readLine();
@@ -28,7 +31,7 @@ public class ConfigRetriever {
             return result;
         }
         catch (FileNotFoundException e) {
-            System.out.println("No such config name");
+            System.out.println("No such config name: "+configFile.getAbsolutePath());
             return null;
         }
         catch (IOException e) {
@@ -57,7 +60,6 @@ public class ConfigRetriever {
 //            result[0] = Integer.parseInt(line1.split(":")[1]);
 //            result[1] = Integer.parseInt(line2.split(":")[1]);
 
-            System.out.println(Arrays.toString(result));
             return result;
         }
         catch (NumberFormatException e){
@@ -74,10 +76,9 @@ public class ConfigRetriever {
         return result;
     }
 
-    public GameZone retrieveGameZone(String owner){
-        return null;
+    public void changeConfig(String configName){
+        this.configName = configName.contains(".cfg") ? configName : (configName+".cfg");
+
+        this.configFile = new File(".\\lab8\\src\\"+this.configName);
     }
-
-
-
 }
