@@ -1,18 +1,37 @@
 package Database;
 
-import GameZone.GameZone;
-
 import java.io.*;
-import java.util.Arrays;
 
+// !! запитать про JavaDoc
+
+/**
+ * The ConfigRetriever class is responsible for reading configuration files and extracting game zone settings.
+ * It supports configurations specified either as key-value pairs separated by a colon (:), (e.g., "width:25 &lt\n&gt height:25")
+ * or as comma-separated values (e.g., "25,25")
+ */
 public class ConfigRetriever {
     String configName;
     File configFile;
 
+    /**
+     * Constructor to initialize the ConfigRetriever with a given configuration file name.
+     * method {@link #changeConfig(String) changeConfig} is used not to repeat code
+     *
+     * @param configName The name of the configuration file.
+     */
     public ConfigRetriever(String configName){
         changeConfig(configName);
     }
 
+    /**
+     * Reads and retrieves game zone configuration from the file.
+     * The configuration may be specified in one of the following formats:
+     * - Colon-separated key-value pairs (e.g., "width:25 &lt\n&gt height:25").
+     * - Comma-separated values (e.g., "25,25").
+     *
+     * @return An array of two integers representing width and height.
+     *         Returns {@code null} if the configuration file is not found or contains invalid data.
+     */
     public int[] getGameZoneConfig(){
         try (BufferedReader reader = new BufferedReader(new FileReader(configFile))) {
             int[] result = new int[2];
@@ -40,6 +59,13 @@ public class ConfigRetriever {
         }
     }
 
+    /**
+     * Parses configuration data from two lines which are colon-separated (e.g., "width:25 &lt\n&gt height:25").
+     *
+     * @param line1 The first line of configuration.
+     * @param line2 The second line of configuration.
+     * @return An array of two integers representing width and height.
+     */
     private int[] getNumbers(String line1, String line2){
         int[] result = new int[2];
         try {
@@ -57,8 +83,6 @@ public class ConfigRetriever {
             else {
                 throw new NumberFormatException();
             }
-//            result[0] = Integer.parseInt(line1.split(":")[1]);
-//            result[1] = Integer.parseInt(line2.split(":")[1]);
 
             return result;
         }
@@ -68,6 +92,12 @@ public class ConfigRetriever {
         }
     }
 
+    /**
+     * Parses configuration data from a single comma-separated line (e.g., "25,25").
+     *
+     * @param line The line containing comma-separated values.
+     * @return An array of two integers representing width and height.
+     */
     private int[] getNumbers(String line) {
         int[] result = new int[2];
         String[] splitLine = line.split(",");
@@ -76,6 +106,12 @@ public class ConfigRetriever {
         return result;
     }
 
+    /**
+     * Changes the current configuration file to a new one.
+     * If the provided name does not include the ".cfg" extension, it will be appended automatically.
+     *
+     * @param configName The new configuration file name. It can be either config-name.cfg either config-name
+     */
     public void changeConfig(String configName){
         this.configName = configName.contains(".cfg") ? configName : (configName+".cfg");
 

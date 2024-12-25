@@ -7,6 +7,9 @@ import GameZone.Builder.*;
 
 import java.util.Arrays;
 
+/**
+ * Main class creates instances of all classes to test them
+ */
 public class Main {
     public static void main(String[] args) {
         GameZone gz = new GameZone(10, 10, "Metamorphosis#5133");
