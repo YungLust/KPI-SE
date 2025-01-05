@@ -2,12 +2,10 @@ package Database;
 
 import java.io.*;
 
-// !! запитать про JavaDoc
-
 /**
  * The ConfigRetriever class is responsible for reading configuration files and extracting game zone settings.
- * It supports configurations specified either as key-value pairs separated by a colon (:), (e.g., "width:25 &lt\n&gt height:25")
- * or as comma-separated values (e.g., "25,25")
+ * It supports configurations specified either as comma-separated values (e.g., "25,25")
+ * or as key-value pairs separated by a colon (:), e.g.: <br>width:25<br>height:25<br>
  */
 public class ConfigRetriever {
     String configName;
@@ -26,7 +24,7 @@ public class ConfigRetriever {
     /**
      * Reads and retrieves game zone configuration from the file.
      * The configuration may be specified in one of the following formats:
-     * - Colon-separated key-value pairs (e.g., "width:25 &lt\n&gt height:25").
+     * - Colon-separated key-value pairs (e.g.: <br>width:25<br>height:25<br>
      * - Comma-separated values (e.g., "25,25").
      *
      * @return An array of two integers representing width and height.
