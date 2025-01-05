@@ -1,15 +1,17 @@
 package GameZone.Builder;
 
+import Buildings.Buildings;
 import GameZone.*;
 
 /**
  * declares methods to add/reset parameters and build {@link GameZone GameZone}
  */
 public interface Builder {
-    void setWidth(int width);
-    void setHeight(int height);
-    void setOwner(String owner);
+    GameZoneBuilder setWidth(int width);
+    GameZoneBuilder setHeight(int height);
+    GameZoneBuilder setOwner(String owner);
+    GameZoneBuilder reset();
 
     GameZone build();
-    void reset();
+
 }

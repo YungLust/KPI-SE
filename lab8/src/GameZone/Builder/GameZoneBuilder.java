@@ -14,10 +14,11 @@ public class GameZoneBuilder implements Builder{
      *  sets all the zone`s variables to empty values
      */
     @Override
-    public void reset() {
+    public GameZoneBuilder reset() {
         width = 0;
         height = 0;
         owner = "";
+        return this;
     }
 
     /**
@@ -34,8 +35,9 @@ public class GameZoneBuilder implements Builder{
      * @param owner is an owner of GameZone
      */
     @Override
-    public void setOwner(String owner) {
+    public GameZoneBuilder setOwner(String owner) {
         this.owner = owner;
+        return this;
     }
 
     /**
@@ -43,8 +45,9 @@ public class GameZoneBuilder implements Builder{
      * @param width is width of GameZone
      */
     @Override
-    public void setWidth(int width) {
+    public GameZoneBuilder setWidth(int width) {
         this.width = width;
+        return this;
     }
 
     /**
@@ -52,7 +55,8 @@ public class GameZoneBuilder implements Builder{
      * @param height is height of GameZone
      */
     @Override
-    public void setHeight(int height) {
+    public GameZoneBuilder setHeight(int height) {
         this.height = height;
+        return this;
     }
 }

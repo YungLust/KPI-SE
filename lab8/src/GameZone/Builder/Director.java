@@ -66,9 +66,6 @@ public class Director {
      * @return A constructed GameZone instance.
      */
     private GameZone build(int[] data, String owner) {
-        builder.setWidth(data[0]);
-        builder.setHeight(data[1]);
-        builder.setOwner(owner);
-        return builder.build();
+        return builder.setWidth(data[0]).setHeight(data[1]).setOwner(owner).build();
     }
 }

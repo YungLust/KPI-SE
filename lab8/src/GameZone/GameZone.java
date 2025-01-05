@@ -73,12 +73,14 @@ public class GameZone {
     public void removeBuilding(Buildings building, int x, int y) {
         if (buildings.contains(building)) {
             buildings.remove(building);
-
+            x-=1;
+            y-=1;
             int width = building.getWidth();
             int height = building.getHeight();
 
-            for (int i = x; i < width; i++) {
-                for (int j = y; j < height; j++) {
+            for (int i = x; i < x+width; i++) {
+                for (int j = y; j < y+height; j++) {
+                    //System.out.printf("deleting shit at: [%d][%d]\n",i,j);
                     display[j][i] = '\0';
                 }
             }
