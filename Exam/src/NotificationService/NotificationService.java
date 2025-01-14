@@ -25,7 +25,7 @@ public class NotificationService implements Publisher {
     }
 
     public void sendMessage(Message message){
-        System.out.println("Sending message: "+ message.getText());
+        System.out.println("Sending message:\n"+ message.getText());
         notifySubs(message);
         message.setState(new SentState());
     }

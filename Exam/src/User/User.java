@@ -12,7 +12,7 @@ public class User implements Subscriber{
 
     @Override
     public void update(Message message) {
-        System.out.println(username+" got a message:" + message.getText());
+        System.out.println(username+" got a message:\n" + message.getText());
         message.setState(new DeliveredState());
     }
 

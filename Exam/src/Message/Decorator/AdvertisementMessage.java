@@ -13,7 +13,7 @@ public class AdvertisementMessage extends MessageDecorator {
 
     @Override
     public String getText() {
-        return super.getText() + "\n Advertisement just for you: " + adText;
+        return super.getText() + "\n * Advertisement just for you: " + adText;
     }
 
 }
