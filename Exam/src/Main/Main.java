@@ -26,7 +26,9 @@ public class Main {
         Message message = new Message("New product: Electric Light Orchestra only for 99$");
 
         Message encryptedMsg = new EncryptedMessage(message);
+        encryptedMsg.checkState();
         notificationService.sendMessage(encryptedMsg);
+        encryptedMsg.checkState();
 
         System.out.println();
         notificationService.removeSub(user1);

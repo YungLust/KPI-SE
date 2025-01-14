@@ -12,6 +12,11 @@ public class Message {
         this.state = new NewState();
     }
 
+    public void checkState(){
+        System.out.print("Checking message state: ");
+        state.getInfo();
+    }
+
     public String getText() {
         return text;
     }
